@@ -12,7 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
 import motorizationWiredImg from "@/assets/motorization-wired.webp";
 import motorizationRadioImg from "@/assets/motorization-radio.webp";
@@ -163,7 +163,7 @@ const MotorisationDomotiquePage = () => {
       />
       <FAQSection />
       <TestimonialsSection />
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="motorisation-domotique" />
       <Footer />
     </main>
   );

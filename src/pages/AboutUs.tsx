@@ -10,7 +10,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import aboutTeamImg from "@/assets/about-team-v2.webp";
 import aboutValuesImg from "@/assets/about-values.webp";
@@ -299,7 +299,7 @@ const AboutUsPage = () => {
       <TestimonialsSection />
 
       {/* Service Regions Section - Reused Component */}
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="a-propos" />
 
       {/* Quote Form Section */}
       <QuoteFormSection />

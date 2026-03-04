@@ -104,11 +104,13 @@ Chaque page contient :
 6. **ProcessSection** — 4 étapes (timeline visuelle)
 7. **ImageTextSection** — Section image + texte expertise
 8. **TestimonialsSection** — Avis clients
-9. **RegionsSection** — Paris arrondissements + banlieue IDF (dépliable)
-10. **ServiceRegionsSection** — Toutes les régions de France (dépliable, redirections actives uniquement pour Paris/IDF)
-11. **FAQSection** — FAQ avec Schema.org
-12. **ContactSection** — Coordonnées + map
-13. **Footer** — Liens, légal, réseaux
+9. **ServiceRegionsSection** — Toutes les régions de France (dépliable, redirections actives uniquement pour Paris/IDF)
+10. **FAQSection** — FAQ avec Schema.org
+11. **ContactSection** — Coordonnées + map
+12. **Footer** — Liens, légal, réseaux
+
+### 5.1 Sections pages internes (services, à propos, etc.)
+Chaque page interne affiche une section **LocalZonesGrid** en bas de page, montrant 12 zones Paris/IDF dans un **ordre différent** (shuffle déterministe basé sur l'identifiant de la page). Ceci assure un maillage interne varié et un contenu unique par page pour le SEO.
 
 ---
 
@@ -191,7 +193,6 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 
 ### 🔴 Priorité haute
 - [ ] **Connexion Supabase** : formulaire de devis fonctionnel (envoi emails, stockage données)
-- [ ] **Images uniques pour chaque page de zone** : générer des photos réelles sans doublon pour les 53 villes (Paris arrondissements + banlieue). Chaque image doit montrer un repère local identifiable
 - [ ] **Harmonisation visuelle complète** : vérifier que TOUTES les pages (services, blog, zones, légales) utilisent les mêmes tokens de design, couleurs, espacements et styles de cartes que la page d'accueil
 
 ### 🟡 Priorité moyenne
@@ -205,6 +206,13 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 - [ ] **Avis Google** : intégration widget avis réels
 - [ ] **Newsletter** : capture email pour fidélisation
 - [ ] **Chat en direct** : WhatsApp Business API (optionnel)
+
+### ✅ Terminé récemment
+- [x] Images uniques pour les 53 pages de zone (Vincennes & Vitry-sur-Seine inclus)
+- [x] Suppression de la section RegionsSection (arrondissements/banlieue) de la page d'accueil
+- [x] Section LocalZonesGrid avec ordre aléatoire différent par page sur toutes les pages internes
+- [x] Consolidation documentation en fichier unique CAHIER_DES_CHARGES.md
+- [x] Section ServiceRegionsSection (régions de France) visible et dépliable sur la page d'accueil
 
 ---
 

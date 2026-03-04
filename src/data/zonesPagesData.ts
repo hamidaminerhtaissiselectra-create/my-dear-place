@@ -1501,6 +1501,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 12ème", slug: "reparation-volet-paris-12" },
       { label: "Montreuil", slug: "reparation-volet-montreuil" },
     ],
+    image: "/images/zones/vincennes.webp",
   },
   {
     name: "Vitry-sur-Seine",
@@ -1529,6 +1530,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Creteil", slug: "reparation-volet-creteil" },
       { label: "Paris 13ème", slug: "reparation-volet-paris-13" },
     ],
+    image: "/images/zones/vitry-sur-seine.webp",
   },
   {
     name: "Evry-Courcouronnes",

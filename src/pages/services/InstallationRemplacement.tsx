@@ -12,7 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
 import installationTechnicianImg from "@/assets/installation-technician-section.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
@@ -155,7 +155,7 @@ const InstallationRemplacementPage = () => {
       />
       <FAQSection />
       <TestimonialsSection />
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="installation-remplacement" />
       <Footer />
     </main>
   );
