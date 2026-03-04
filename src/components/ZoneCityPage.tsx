@@ -96,25 +96,25 @@ const ZoneCityPage = ({ city }: ZoneCityPageProps) => {
         {city.image ? (
           <motion.div className="absolute inset-0" style={{ y: bgY }}>
             <img src={city.image} alt={`Volets roulants ${city.name}`} className="w-full h-[120%] object-cover" width={1920} height={1080} />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40" />
           </motion.div>
         ) : (
-          <div className="absolute inset-0 bg-hero-gradient" />
+          <div className="absolute inset-0 bg-section-gradient" />
         )}
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-primary-foreground/70 text-sm mb-6">
-            <Link to="/" className="hover:text-primary-foreground transition-colors">Accueil</Link>
+          <div className="flex items-center gap-2 text-foreground/60 text-sm mb-6">
+            <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
             <ChevronRight className="h-4 w-4" />
-            <Link to="/zones-intervention" className="hover:text-primary-foreground transition-colors">Zones d'Intervention</Link>
+            <Link to="/zones-intervention" className="hover:text-foreground transition-colors">Zones d'Intervention</Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-primary-foreground">{city.name}</span>
+            <span className="text-foreground">{city.name}</span>
           </div>
 
           <div className="max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <Badge variant="outline" className="gap-2 px-4 py-1.5 rounded-full text-primary-foreground text-sm font-semibold border border-primary-foreground/20 mb-6 backdrop-blur-sm">
+              <Badge variant="serviceBlue" className="gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
                 <MapPin className="h-3.5 w-3.5" /> {city.department} ({city.departmentCode})
               </Badge>
             </motion.div>
@@ -123,7 +123,7 @@ const ZoneCityPage = ({ city }: ZoneCityPageProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-primary-foreground"
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-foreground"
             >
               {city.h1}
             </motion.h1>
@@ -132,7 +132,7 @@ const ZoneCityPage = ({ city }: ZoneCityPageProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl"
+              className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl"
             >
               {city.heroText}
             </motion.p>

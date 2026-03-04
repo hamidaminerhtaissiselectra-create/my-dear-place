@@ -80,7 +80,7 @@ const PolitiqueConfidentialite = () => {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center">
-            <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2">
+            <Button size="lg" variant="accent" asChild className="gap-2">
               <a href="/#devis">Demander un Devis Gratuit <ArrowRight className="h-5 w-5" /></a>
             </Button>
           </motion.div>
