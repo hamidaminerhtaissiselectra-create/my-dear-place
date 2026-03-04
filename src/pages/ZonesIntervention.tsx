@@ -5,7 +5,7 @@ import { useSEO } from "@/hooks/useSEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import AnimatedSection from "@/components/AnimatedSection";
 import { staggerItem } from "@/lib/animations";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card as _Card, CardContent as _CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { regionsData } from "@/data/regionsData";
@@ -34,21 +34,8 @@ import {
 } from "@/components/ui/accordion";
 import QuoteFormSection from "@/components/QuoteFormSection";
 
-// Import des images des régions
 import ileDeFranceImg from "@/assets/regions/ile-de-france.webp";
 import parisCityscapeImg from "@/assets/regions/paris-cityscape.webp";
-import auvergneRhoneAlpesImg from "@/assets/regions/auvergne-rhone-alpes.webp";
-import provenceAlpesCoteAzurImg from "@/assets/regions/provence-alpes-cote-d-azur.webp";
-import nouvelleAquitaineImg from "@/assets/regions/nouvelle-aquitaine.webp";
-import occitanieImg from "@/assets/regions/occitanie.webp";
-import hautsDeFranceImg from "@/assets/regions/hauts-de-france.webp";
-import grandEstImg from "@/assets/regions/grand-est.webp";
-import paysDeLaLoireImg from "@/assets/regions/pays-de-la-loire.webp";
-import bretagneImg from "@/assets/regions/bretagne.webp";
-import normandieImg from "@/assets/regions/normandie.webp";
-import bourgogneFrancheComteImg from "@/assets/regions/bourgogne-franche-comte.webp";
-import centreValDeLoireImg from "@/assets/regions/centre-val-de-loire.webp";
-import corseImg from "@/assets/regions/corse.webp";
 
 const ZonesIntervention = () => {
   
@@ -99,22 +86,6 @@ const ZonesIntervention = () => {
     }
   ];
 
-  const regionImages: Record<string, string> = {
-    "paris": ileDeFranceImg,
-    "ile-de-france": ileDeFranceImg,
-    "auvergne-rhone-alpes": auvergneRhoneAlpesImg,
-    "provence-alpes-cote-d-azur": provenceAlpesCoteAzurImg,
-    "nouvelle-aquitaine": nouvelleAquitaineImg,
-    "occitanie": occitanieImg,
-    "hauts-de-france": hautsDeFranceImg,
-    "grand-est": grandEstImg,
-    "pays-de-la-loire": paysDeLaLoireImg,
-    "bretagne": bretagneImg,
-    "normandie": normandieImg,
-    "bourgogne-franche-comte": bourgogneFrancheComteImg,
-    "centre-val-de-loire": centreValDeLoireImg,
-    "corse": corseImg,
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -402,7 +373,7 @@ const ZonesIntervention = () => {
         </div>
       </section>
 
-      {/* Autres Régions - Grille Simple */}
+      {/* Section villes IDF détaillées */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -413,37 +384,29 @@ const ZonesIntervention = () => {
             className="text-center max-w-2xl mx-auto mb-14"
           >
             <Badge variant="default" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4 bg-accent/10 text-accent border border-accent/20">
-              <MapPin className="h-3.5 w-3.5" /> Couverture Nationale
+              <MapPin className="h-3.5 w-3.5" /> Villes desservies
             </Badge>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-              Nos Régions d'Intervention en France
+              Nos Villes d'Intervention en Île-de-France
             </h2>
             <p className="text-muted-foreground">
-              Nous intervenons également dans les grandes métropoles nationales avec le même niveau d'expertise et de service.
+              Découvrez nos pages dédiées pour chaque ville et arrondissement. Contenu personnalisé, témoignages locaux et services adaptés.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regionsData.slice(2).map((region, index) => (
-              <AnimatedSection key={region.slug} animation="fade-up" delay={index * 50}>
-                <Card className="overflow-hidden group hover:shadow-lg transition-all border-border h-full">
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={regionImages[region.slug] || ileDeFranceImg} 
-                      alt={region.name}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                      <h3 className="text-white text-2xl font-bold text-center px-4">{region.name}</h3>
-                    </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {regionsData[0].mainCities.map((city, i) => (
+              <AnimatedSection key={city} animation="fade-up" delay={i * 30}>
+                <Link 
+                  to={`/zones-intervention/reparation-volet-paris-${i + 1}`}
+                  className="block p-4 rounded-xl border border-border bg-card hover:border-accent hover:shadow-md transition-all group"
+                >
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-accent" />
+                    <span className="font-semibold text-foreground group-hover:text-accent transition-colors">{city}</span>
+                    <ArrowRight className="h-3.5 w-3.5 ml-auto text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <CardContent className="p-6">
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{region.description}</p>
-                    <Badge variant="default" className="text-[11px] font-bold bg-accent/10 text-accent border border-accent/20">
-                      {region.departments.length} départements
-                    </Badge>
-                  </CardContent>
-                </Card>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
