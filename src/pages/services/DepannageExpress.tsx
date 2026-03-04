@@ -1,0 +1,160 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Zap, ArrowRight, Phone, ChevronRight, Clock, Shield, AlertTriangle, Wrench, ShieldAlert } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import imgDepannage from "@/assets/service-depannage-v2.webp";
+import ProcessSection from "@/components/ProcessSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import QuoteFormSection from "@/components/QuoteFormSection";
+import RepairShowcaseSection from "@/components/RepairShowcaseSection";
+import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import FAQSection from "@/components/FAQSection";
+import emergencyTechnicianImg from "@/assets/emergency-technician-section.webp";
+import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
+
+const situations = [
+  { title: "Urgence Nocturne & Sécurité", desc: "Volet bloqué en position ouverte la nuit ou suite à une panne moteur ? Nous intervenons pour sécuriser votre domicile immédiatement.", urgency: "CRITIQUE", color: "border-service-rose/30", image: "/images/depannage/nuit.webp", data: ["Intervention : < 1h", "Dispo : 24h/24", "Sécurisation : Immédiate"] },
+  { title: "Tentative d'Effraction", desc: "Votre volet a été forcé ou endommagé ? Nous réparons les lames, les coulisses et renforçons la sécurité de votre installation.", urgency: "HAUTE", color: "border-service-orange/30", image: "/images/depannage/effraction.webp", data: ["Réparation : Lames/Axe", "Renfort : Anti-relevage", "Assurance : Devis agréé"] },
+  { title: "Dégâts Intempéries", desc: "Grêle, tempête ou vent violent ? Si votre volet est sorti de ses rails ou si le tablier est abîmé, nous intervenons rapidement.", urgency: "MOYENNE", color: "border-service-blue/30", image: "/images/depannage/intemperies.webp", data: ["Diagnostic : Structurel", "Pièces : Tablier/Lames", "Garantie : 2 ans"] },
+];
+
+const engagements = [
+  { icon: Clock, title: "Intervention le jour même", desc: "Pour les urgences de sécurité, nous nous engageons à intervenir le jour même à Paris et en Île-de-France.", color: "bg-service-orange", border: "border-service-orange/20" },
+  { icon: Shield, title: "Diagnostic offert", desc: "Pas de frais de déplacement, pas de frais de diagnostic. Transparence totale.", color: "bg-service-emerald", border: "border-service-emerald/20" },
+  { icon: Wrench, title: "Pièces en stock", desc: "Nos véhicules sont équipés des pièces les plus courantes. 95% des pannes résolues au premier passage.", color: "bg-service-blue", border: "border-service-blue/20" },
+  { icon: AlertTriangle, title: "Disponible 7j/7", desc: "Urgences traitées 7 jours sur 7, y compris les week-ends et jours fériés.", color: "bg-service-rose", border: "border-service-rose/20" },
+];
+
+const DepannageExpressPage = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
+  useSEO({
+    title: "Dépannage Express Volets Roulants | Urgence 7j/7 Paris & France | Répar'Action Volets",
+    description: "Service de dépannage express pour volets roulants bloqués ou en panne. Intervention le jour même à Paris et en Île-de-France. Disponible 7j/7, diagnostic gratuit.",
+    keywords: "dépannage volet roulant, urgence volet, intervention rapide volet, volet bloqué urgence, Paris, 7j/7",
+    canonicalUrl: "https://reparaction-volets.fr/services/depannage-express",
+  });
+
+  return (
+    <main className="relative">
+      <Navbar />
+      <section ref={heroRef} className="relative pt-24 pb-16 min-h-[60vh] flex items-center overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ y: bgY }}>
+          <img src={imgDepannage} alt="Dépannage express volets roulants" className="w-full h-[120%] object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40" />
+        </motion.div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex items-center gap-2 text-foreground/60 text-sm mb-6">
+            <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
+            <ChevronRight className="h-4 w-4" />
+            <span>Dépannage Express</span>
+          </div>
+          <motion.div {...heroEntry(0)} className="max-w-3xl">
+            <Badge variant="serviceBlue" className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm">
+              <Zap className="h-3.5 w-3.5" /> Intervention rapide
+            </Badge>
+            <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
+              Dépannage Express Volets Roulants — Paris & Île-de-France
+            </h1>
+            <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+              Volet bloqué ? Moteur en panne ? Vitre cassée ? Notre service de dépannage express intervient dans les plus brefs délais pour rétablir la sécurité et le confort de votre habitat. Disponible 7j/7, diagnostic gratuit, pièces en stock.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Button size="lg" variant="accent" asChild className="px-8 py-7 text-lg font-bold rounded-full shadow-xl transition-all duration-300 hover:scale-105">
+                <a href="tel:0603205967" className="flex items-center gap-2"><Phone className="h-5 w-5" /> Appeler Maintenant</a>
+              </Button>
+              <Button size="lg" variant="accent-outline" asChild className="px-8 py-7 text-lg font-bold rounded-full transition-all duration-300 hover:scale-105">
+                <a href="/#devis" className="flex items-center gap-2">Demander un Devis <ArrowRight className="h-5 w-5" /></a>
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Badge variant="serviceRose"><AlertTriangle className="h-4 w-4" /> Urgence 7j/7</Badge>
+              <Badge variant="serviceOrange"><Clock className="h-4 w-4" /> Intervention le jour même</Badge>
+              <Badge variant="serviceEmerald"><Shield className="h-4 w-4" /> Diagnostic offert</Badge>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
+            <Badge variant="accent" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Nos Engagements</Badge>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">Nos Engagements Dépannage Express</h2>
+            <p className="text-muted-foreground">Un service d'urgence fiable, transparent et efficace — c'est la promesse Répar'Action Volets.</p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {engagements.map((e, i) => (
+              <motion.div key={e.title} {...staggerItem(i)} {...hoverLift}
+                className={`bg-card rounded-xl p-6 border ${e.border} card-shadow hover:card-shadow-hover text-center transition-all`}>
+                <div className={`w-14 h-14 rounded-2xl ${e.color} flex items-center justify-center mx-auto mb-4 shadow-lg border border-white/20`}>
+                  <e.icon className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="font-display font-bold text-foreground mb-2 text-sm">{e.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{e.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-section-gradient">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
+            <Badge variant="serviceRose" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Urgences</Badge>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">Les Situations que Nous Traitons en Urgence</h2>
+            <p className="text-muted-foreground">Quelle que soit la panne, nous avons la solution pour la résoudre rapidement.</p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {situations.map((s, i) => (
+              <motion.div key={s.title} {...staggerItem(i)} {...hoverLift}
+                className={`group bg-card rounded-2xl border ${s.color} overflow-hidden card-shadow hover:card-shadow-hover transition-all duration-500 flex flex-col`}
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <Badge className="absolute top-4 right-4 bg-service-rose text-white border-none text-xs font-bold">{s.urgency}</Badge>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{s.title}</h3>
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-6 flex-1">{s.desc}</p>
+                  <div className="grid grid-cols-1 gap-3 mb-6">
+                    {s.data.map((item) => (
+                      <div key={item} className="flex items-center gap-2 text-xs font-semibold text-foreground/90">
+                        <ShieldAlert className="h-5 w-5 text-service-rose flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button variant="destructive" size="sm" className="w-full rounded-xl gap-2 mt-auto" asChild>
+                    <a href="tel:0603205967"><Phone className="h-4 w-4" /> Urgence 24h/7j</a>
+                  </Button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ProcessSection />
+      <QuoteFormSection />
+      <RepairShowcaseSection image={emergencyTechnicianImg} title="Réactivité & Professionnalisme en Urgence"
+        description="Une panne de volet roulant ne peut pas attendre. Nos techniciens d'urgence sont formés pour intervenir rapidement, même en conditions difficiles ou la nuit."
+        highlights={["Intervention dans l'heure pour les urgences de sécurité", "Disponibilité 24h/24, 7 jours sur 7", "Pièces de rechange immédiatement disponibles", "Diagnostic gratuit et transparence totale"]}
+      />
+      <FAQSection />
+      <TestimonialsSection />
+      <ServiceRegionsSection />
+      <Footer />
+    </main>
+  );
+};
+
+export default DepannageExpressPage;
