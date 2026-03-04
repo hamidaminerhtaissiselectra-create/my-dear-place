@@ -8,6 +8,7 @@ import ImageTextSection from "@/components/ImageTextSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RegionsSection from "@/components/RegionsSection";
+import ServiceRegionsSection from "@/components/ServiceRegionsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -61,6 +62,7 @@ const Index = () => {
       <ImageTextSection />
       <TestimonialsSection />
       <RegionsSection />
+      <ServiceRegionsSection />
       <FAQSection />
       <ContactSection />
       <Footer />
