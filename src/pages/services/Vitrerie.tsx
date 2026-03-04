@@ -12,7 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
 import glazierTechnicianImg from "@/assets/glazier-technician-section.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
@@ -165,7 +165,7 @@ const VitreriePage = () => {
       />
       <FAQSection />
       <TestimonialsSection />
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="vitrerie" />
       <Footer />
     </main>
   );

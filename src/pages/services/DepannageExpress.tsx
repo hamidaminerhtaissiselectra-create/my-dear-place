@@ -12,7 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
 import emergencyTechnicianImg from "@/assets/emergency-technician-section.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
@@ -151,7 +151,7 @@ const DepannageExpressPage = () => {
       />
       <FAQSection />
       <TestimonialsSection />
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="depannage-express" />
       <Footer />
     </main>
   );

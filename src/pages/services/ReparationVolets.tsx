@@ -12,7 +12,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
-import ServiceRegionsSection from "@/components/ServiceRegionsSection";
+import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
 import repairTechnicianImg from "@/assets/repair-technician-section.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
@@ -129,7 +129,7 @@ const ReparationVoletsPage = () => {
       />
       <FAQSection />
       <TestimonialsSection />
-      <ServiceRegionsSection />
+      <LocalZonesGrid pageId="reparation-volets" />
       <Footer />
     </main>
   );

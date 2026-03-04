@@ -7,7 +7,6 @@ import ProcessSection from "@/components/ProcessSection";
 import ImageTextSection from "@/components/ImageTextSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import QuoteFormSection from "@/components/QuoteFormSection";
-import RegionsSection from "@/components/RegionsSection";
 import ServiceRegionsSection from "@/components/ServiceRegionsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
@@ -61,7 +60,6 @@ const Index = () => {
       <ProcessSection />
       <ImageTextSection />
       <TestimonialsSection />
-      <RegionsSection />
       <ServiceRegionsSection />
       <FAQSection />
       <ContactSection />
