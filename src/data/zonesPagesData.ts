@@ -631,6 +631,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 19ème", slug: "reparation-volet-paris-19" },
       { label: "Bobigny", slug: "reparation-volet-bobigny" },
     ],
+    image: "/images/zones/aubervilliers.webp",
   },
   {
     name: "Bagnolet",
@@ -659,6 +660,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Noisy-le-Sec", slug: "reparation-volet-noisyle-sec" },
       { label: "Paris 11ème", slug: "reparation-volet-paris-11" },
     ],
+    image: "/images/zones/bagnolet.webp",
   },
   {
     name: "Bobigny",
@@ -687,6 +689,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Noisy-le-Sec", slug: "reparation-volet-noisyle-sec" },
       { label: "Montreuil", slug: "reparation-volet-montreuil" },
     ],
+    image: "/images/zones/bobigny.webp",
   },
   {
     name: "Boulogne-Billancourt",
@@ -744,6 +747,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Versailles", slug: "reparation-volet-versailles" },
       { label: "Rambouillet", slug: "reparation-volet-rambouillet" },
     ],
+    image: "/images/zones/cergy.webp",
   },
   {
     name: "Corbeil-Essonnes",
@@ -772,6 +776,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Villejuif", slug: "reparation-volet-villejuif" },
       { label: "Creteil", slug: "reparation-volet-creteil" },
     ],
+    image: "/images/zones/corbeil-essonnes.webp",
   },
   {
     name: "Courbevoie",
@@ -800,6 +805,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Levallois-Perret", slug: "reparation-volet-levallois-perret" },
       { label: "Neuilly-sur-Seine", slug: "reparation-volet-neuillysur-seine" },
     ],
+    image: "/images/zones/courbevoie.webp",
   },
   {
     name: "Creteil",
@@ -857,6 +863,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Montreuil", slug: "reparation-volet-montreuil" },
       { label: "Noisy-le-Sec", slug: "reparation-volet-noisyle-sec" },
     ],
+    image: "/images/zones/fontenay-sous-bois.webp",
   },
   {
     name: "Ivry-sur-Seine",
@@ -885,6 +892,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 13ème", slug: "reparation-volet-paris-13" },
       { label: "Creteil", slug: "reparation-volet-creteil" },
     ],
+    image: "/images/zones/ivry-sur-seine.webp",
   },
   {
     name: "La Défense",
@@ -913,6 +921,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Neuilly-sur-Seine", slug: "reparation-volet-neuillysur-seine" },
       { label: "Levallois-Perret", slug: "reparation-volet-levallois-perret" },
     ],
+    image: "/images/zones/la-defense.webp",
   },
   {
     name: "Levallois-Perret",
@@ -941,6 +950,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 17ème", slug: "reparation-volet-paris-17" },
       { label: "Puteaux", slug: "reparation-volet-puteaux" },
     ],
+    image: "/images/zones/levallois-perret.webp",
   },
   {
     name: "Mantes-la-Jolie",
@@ -969,6 +979,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Pontoise", slug: "reparation-volet-pontoise" },
       { label: "Cergy", slug: "reparation-volet-cergy" },
     ],
+    image: "/images/zones/mantes-la-jolie.webp",
   },
   {
     name: "Melun",
@@ -997,6 +1008,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Creteil", slug: "reparation-volet-creteil" },
       { label: "Fontenay-sous-Bois", slug: "reparation-volet-fontenaysous-bois" },
     ],
+    image: "/images/zones/melun.webp",
   },
   {
     name: "Montreuil",
@@ -1025,6 +1037,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 20ème", slug: "reparation-volet-paris-20" },
       { label: "Fontenay-sous-Bois", slug: "reparation-volet-fontenaysous-bois" },
     ],
+    image: "/images/zones/montreuil.webp",
   },
   {
     name: "Neuilly-sur-Seine",
@@ -1082,6 +1095,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Montreuil", slug: "reparation-volet-montreuil" },
       { label: "Pantin", slug: "reparation-volet-pantin" },
     ],
+    image: "/images/zones/noisy-le-sec.webp",
   },
   {
     name: "Pantin",
@@ -1110,6 +1124,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 19ème", slug: "reparation-volet-paris-19" },
       { label: "Noisy-le-Sec", slug: "reparation-volet-noisyle-sec" },
     ],
+    image: "/images/zones/pantin.webp",
   },
   {
     name: "Pontoise",
@@ -1138,6 +1153,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Mantes-la-Jolie", slug: "reparation-volet-mantesla-jolie" },
       { label: "Versailles", slug: "reparation-volet-versailles" },
     ],
+    image: "/images/zones/pontoise.webp",
   },
   {
     name: "Puteaux",
@@ -1166,6 +1182,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Rueil-Malmaison", slug: "reparation-volet-rueil-malmaison" },
       { label: "Saint-Cloud", slug: "reparation-volet-saint-cloud" },
     ],
+    image: "/images/zones/puteaux.webp",
   },
   {
     name: "Rambouillet",
@@ -1194,6 +1211,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Mantes-la-Jolie", slug: "reparation-volet-mantesla-jolie" },
       { label: "Cergy", slug: "reparation-volet-cergy" },
     ],
+    image: "/images/zones/rambouillet.webp",
   },
   {
     name: "Rueil-Malmaison",
@@ -1222,6 +1240,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Boulogne-Billancourt", slug: "reparation-volet-boulogne-billancourt" },
       { label: "Sevres", slug: "reparation-volet-sevres" },
     ],
+    image: "/images/zones/rueil-malmaison.webp",
   },
   {
     name: "Saint-Cloud",
@@ -1250,6 +1269,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Rueil-Malmaison", slug: "reparation-volet-rueil-malmaison" },
       { label: "Paris 16ème", slug: "reparation-volet-paris-16" },
     ],
+    image: "/images/zones/saint-cloud.webp",
   },
   {
     name: "Saint-Denis",
@@ -1307,6 +1327,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Pontoise", slug: "reparation-volet-pontoise" },
       { label: "Cergy", slug: "reparation-volet-cergy" },
     ],
+    image: "/images/zones/saint-germain-en-laye.webp",
   },
   {
     name: "Saint-Mandé",
@@ -1335,6 +1356,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Fontenay-sous-Bois", slug: "reparation-volet-fontenaysous-bois" },
       { label: "Creteil", slug: "reparation-volet-creteil" },
     ],
+    image: "/images/zones/saint-mande.webp",
   },
   {
     name: "Saint-Ouen",
@@ -1363,6 +1385,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Paris 17ème", slug: "reparation-volet-paris-17" },
       { label: "Aubervilliers", slug: "reparation-volet-aubervilliers" },
     ],
+    image: "/images/zones/saint-ouen.webp",
   },
   {
     name: "Sevres",
@@ -1391,6 +1414,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Rueil-Malmaison", slug: "reparation-volet-rueil-malmaison" },
       { label: "Versailles", slug: "reparation-volet-versailles" },
     ],
+    image: "/images/zones/sevres.webp",
   },
   {
     name: "Versailles",
@@ -1448,6 +1472,7 @@ export const zonesPagesData: ZoneCityData[] = [
       { label: "Creteil", slug: "reparation-volet-creteil" },
       { label: "Paris 13ème", slug: "reparation-volet-paris-13" },
     ],
+    image: "/images/zones/villejuif.webp",
   },
   {
     name: "Vincennes",
